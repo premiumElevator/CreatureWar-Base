@@ -12,9 +12,9 @@
  */
 public abstract class Creature
 {
-    protected int str;
+    private int str;
     private int max_hp;
-    protected int hp;
+    private int hp;
 
     /**
      * default constructor - this should never actually run
@@ -65,8 +65,9 @@ public abstract class Creature
      * @return true when current hit point level is less than or equal to zero
      */
     public boolean isDead() {
-        //implement this
-        return false; //change this
+        if(isAlive())
+            return false;
+        return true;
     }
 
 
@@ -77,6 +78,16 @@ public abstract class Creature
      */
     public void takeDamage(int damage) {
         hp = hp - damage;
+    }
+    
+    public int getHP()
+    {
+        return hp;
+    }
+    
+    public int getStr()
+    {
+        return str;
     }
 
 }

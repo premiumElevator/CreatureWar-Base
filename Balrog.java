@@ -15,7 +15,7 @@ public class Balrog extends Creature
 
    public int damage()
    {
-      return str * 2;
+      return super.getStr() * 2;
    }
 
 }

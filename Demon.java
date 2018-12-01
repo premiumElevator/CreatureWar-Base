@@ -20,7 +20,7 @@ public class Demon extends Creature
 
   public int damage()
   {
-    int dmg = Randomizer.nextInt(str - 1) + 1;
+    int dmg = Randomizer.nextInt(super.getStr() - 1) + 1;
     int d =Randomizer.nextInt(100);
 
     if(d < 5)

@@ -33,7 +33,7 @@ public class Elf extends Creature
 
     public int damage()
     {
-      int dmg = (Randomizer.nextInt(str - 1) + 1);
+      int dmg = (Randomizer.nextInt(super.getStr() - 1) + 1);
       int d = Randomizer.nextInt(100-1)+1;
 
       if(d < 10)
