@@ -20,9 +20,11 @@ public class Demon extends Creature
 
   public int damage()
   {
+    //normal damage calculations
     int dmg = Randomizer.nextInt(super.getStr() - 1) + 1;
+    //generate a random int between 0-100
     int d =Randomizer.nextInt(100);
-
+    // 5 out of 100 times, add 50 to damage (equivalent to 5%)
     if(d < 5)
       dmg += 50;
 
